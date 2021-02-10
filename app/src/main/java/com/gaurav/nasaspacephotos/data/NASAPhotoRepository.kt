@@ -15,7 +15,7 @@ import java.lang.reflect.Type
  */
 class NASAPhotoRepository {
 
-    val listOfPhotosMutableLiveData = MutableLiveData<List<SpacePhotos>>()
+    val spacePhotosListMutableLiveData = MutableLiveData<List<SpacePhotos>>()
     private val moshi = Moshi.Builder().build()
     private val type: Type = Types.newParameterizedType(List::class.java, SpacePhotos::class.java)
     private val jsonAdapter: JsonAdapter<List<SpacePhotos>> = moshi.adapter(type)
@@ -24,10 +24,10 @@ class NASAPhotoRepository {
         getSpacePhotoJsonData(context)?.let { json ->
             val photos: List<SpacePhotos>? = jsonAdapter.fromJson(json)
             photos?.let { listOfPhotos ->
-                listOfPhotosMutableLiveData.value = listOfPhotos.reversed()
+                spacePhotosListMutableLiveData.value = listOfPhotos.reversed()
             }
         }
-        return listOfPhotosMutableLiveData
+        return spacePhotosListMutableLiveData
     }
 
     private fun getSpacePhotoJsonData(context: Context): String? {

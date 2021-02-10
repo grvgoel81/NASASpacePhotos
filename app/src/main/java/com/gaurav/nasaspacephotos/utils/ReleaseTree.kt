@@ -13,7 +13,7 @@ class ReleaseTree : @org.jetbrains.annotations.NotNull Timber.Tree() {
         }
 
         if (priority == Log.ERROR || priority == Log.WARN) {
-            //SEND ERROR REPORTS TO Crashlytics.
+            //Send Error Report To Crashlytics.
         }
     }
 }
