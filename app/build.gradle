@@ -52,12 +52,6 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:1.1.1"
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     implementation "androidx.fragment:fragment-ktx:1.2.5"
-    
-    //navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.2.1'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.2.1'
 
     //Logging Timber
     implementation "com.jakewharton.timber:timber:4.7.1"
