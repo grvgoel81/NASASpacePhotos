@@ -40,7 +40,7 @@ class NASAPhotoDetailsActivity : AppCompatActivity() {
 
     companion object {
 
-        private const val KEY_POSITION = "position"
+        private const val KEY_POSITION = "positio"
 
 
         fun getStartIntent(context: Context, position: Int): Intent {
